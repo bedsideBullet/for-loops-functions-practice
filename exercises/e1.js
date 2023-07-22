@@ -4,9 +4,21 @@
 // getFirstTenNumbers() => [1, 2, 3, ... , 10]
 
 export function getFirstTenNumbers() {
-  // Your code goes here...
+  const numArr = [];
+
+  for (var i = 1; i <= 10; i++) {
+    numArr.push(i);
+  }
+
+  return numArr;
+
 
 }
+
+
+
+
+
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-1"

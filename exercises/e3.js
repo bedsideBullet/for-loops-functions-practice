@@ -9,8 +9,13 @@
  * */
 
 export function getAverage(array) {
-  // Your code goes here...
+  var sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum = sum + array[i];
+  }
 
+  const average = sum / array.length;
+  return average;
 }
 
 
@@ -22,10 +27,21 @@ export function getAverage(array) {
  * */ 
 
 export function getStringSum(str) {
-  // Your code goes here...
+  var sum = 0;
 
+  for (var i = 0; i < str.length; i++) {
+    const char = str[i];
+    if (isDigit(char)) {
+      sum += parseInt(char);
+    }
+  }
+
+  return sum;
 }
 
+function isDigit(char) {
+  return /\d/.test(char);
+}
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-3"
