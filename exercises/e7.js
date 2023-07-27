@@ -5,6 +5,17 @@
 // getClientWithLeastBalance(bankAccounts) => [{ name: 'SomeName', balance: 32, ... }]
 
 export function getClientWithLeastPositiveBalance(array) {
+  const leastBalance = [];
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].balance > 0 && (leastBalance.length === 0 || array[i].balance < leastBalance[0].balance)) {
+      leastBalance.length = 0; // Empty the array before adding the new account
+      leastBalance.push(array[i]);
+    }
+  }
+
+  // Return an array with the least balance account, or an empty array if none found
+  return leastBalance;
 }
 
 // === TEST YOURSELF ===
