@@ -4,7 +4,17 @@
 // NOTE: You can NOT use the array.concat() method in your code
 
 export function concatArrays(arr1, arr2) {
-  return [...arr1, ...arr2];
+  const newArray = new Array(arr1.length + arr2.length);
+
+  for (let i = 0; i < arr1.length; i++) {
+    newArray[i] = arr1[i];
+  }
+
+  for (let i = 0; i < arr2.length; i++) {
+    newArray[arr1.length + i] = arr2[i];
+  }
+
+  return newArray;
 }
 
 // === TEST YOURSELF ===
